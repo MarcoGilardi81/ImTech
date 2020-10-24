@@ -7,7 +7,8 @@
       <a-assets>
         <a-asset-item id="Arch-obj" src="https://marcogilardi81.github.io/ImTech/SC_Arch/SC_Arch.obj"></a-asset-item>
         <a-asset-item id="Arch-mtl" src="https://marcogilardi81.github.io/ImTech/SC_Arch/SC_Arch.mtl"></a-asset-item>        
-      
+        <img id="ground" src="http://www.pathofexile.com/image/devdiary5/step11_small.png">
+        <img id="groundNormal" src="http://www.pathofexile.com/image/devdiary5/step10_small.png">
         <img id="diffuse" src="https://marcogilardi81.github.io/ImTech/SC_Arch/SC_Arch_Desert_Textures/Arch_Low_defaultMat_BaseColor.jpg">
         <img id="AO" src="https://marcogilardi81.github.io/ImTech/SC_Arch/SC_Arch_Desert_Textures/Arch_Low_defaultMat_AO.jpg">
         <img id="NormalTS" src="https://marcogilardi81.github.io/ImTech/SC_Arch/SC_Arch_Desert_Textures/Arch_Low_defaultMat_Normal.jpg">
@@ -17,6 +18,7 @@
       <a-entity id="rig" position="0 0.5 0">
           <a-entity camera look-controls wasd-controls="acceleration:100"></a-entity>
       </a-entity>
+      <a-plane material="src=#ground; normalMap:#groundNormal;" height="100" width="100" rotation ="-90 0 0"></a-plane>
       <a-entity obj-model="obj: #Arch-obj" material=" src:#diffuse;normalMap:#NormalTS; ambientOcclusionMap:#AO " rotation="0 90 0" position="0 0 -1" scale="0.1 0.1 0.1"></a-entity><!---->
     </a-scene>
   </body> 
