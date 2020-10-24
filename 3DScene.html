@@ -5,7 +5,7 @@
   <body>
     <a-scene background="transparent:true" >
       <a-assets>
-        <a-asset-item id="Arch-obj" src="https://marcogilardi81.github.io/ImTech/SC_Arch/SC_Arch.obj" shadow="cast: true"></a-asset-item>
+        <a-asset-item id="Arch-obj" src="https://marcogilardi81.github.io/ImTech/SC_Arch/SC_Arch.obj"></a-asset-item>
         <a-asset-item id="Arch-mtl" src="https://marcogilardi81.github.io/ImTech/SC_Arch/SC_Arch.mtl"></a-asset-item>        
         <img id="ground" src="https://marcogilardi81.github.io/ImTech/step11_small.png">
         <img id="groundNormal" src="https://marcogilardi81.github.io/ImTech/step10_small.png">
@@ -14,12 +14,15 @@
         <img id="NormalTS" src="https://marcogilardi81.github.io/ImTech/SC_Arch/SC_Arch_Desert_Textures/Arch_Low_defaultMat_Normal.jpg">
         <img id="NormalOS" src="https://marcogilardi81.github.io/ImTech/SC_Arch/SC_Arch_Desert_Textures/Arch_Low_defaultMat_Obj_Normal.png">
       </a-assets>
-      <a-entity light="type:point; castShadow:true; shadowCameraVisible:true" rotation="40 0 0" position="2 2 2"></a-entity>
-      <a-entity id="rig" position="0 0.5 0">
+
+      <a-entity light="type:point; castShadow:true" rotation="40 0 0" position="0 4 2"></a-entity>
+      
+      <a-entity id="rig" position="0 0.5 1">
           <a-entity camera look-controls wasd-controls="acceleration:100"></a-entity>
       </a-entity>
-      <a-plane src="#ground" height="100" width="100" rotation ="-90 0 0" shadow="receive: true"></a-plane> <!-- material="src=#ground; normalMap:#groundNormal;"-->
-      <a-entity obj-model="obj: #Arch-obj" material=" src:#diffuse;normalMap:#NormalTS; ambientOcclusionMap:#AO " scale="0.1 0.1 0.1" rotation="0 90 0" position="0 0 -1"></a-entity><!---->
+
+      <a-plane material="src:#ground; repeat: 80 80; roughness: 1; normalMap:#groundNormal; normalScale:2.5; normalTextureRepeat: 80 80" height="100" width="100" rotation ="-90 0 0" shadow="receive: true"></a-plane> <!-- material="src=#ground; normalMap:#groundNormal;"-->
+      <a-entity obj-model="obj: #Arch-obj" material="roughness:1; src:#diffuse;normalMap:#NormalTS;normalScale:1.5; ambientOcclusionMap:#AO " scale="0.1 0.1 0.1" rotation="0 90 0" position="0 0 -1" shadow="cast: true"></a-entity><!---->
     </a-scene>
   </body> 
 </html>
