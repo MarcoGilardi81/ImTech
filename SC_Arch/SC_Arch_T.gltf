@@ -1,0 +1,198 @@
+{
+    "asset": {
+        "version": "2.0",
+        "generator": "Open Asset Import Library (assimp v5.0.5eb040c7)"
+    },
+    "accessors": [
+        {
+            "bufferView": 0,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 2246,
+            "type": "VEC3",
+            "max": [
+                5.349705696105957,
+                21.53996467590332,
+                16.652280807495118
+            ],
+            "min": [
+                -5.349705696105957,
+                -0.8947452306747437,
+                -16.652280807495118
+            ]
+        },
+        {
+            "bufferView": 1,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 2246,
+            "type": "VEC3",
+            "max": [
+                0.9996787309646606,
+                0.9990406632423401,
+                0.9976902008056641
+            ],
+            "min": [
+                -0.9998927116394043,
+                -0.997358500957489,
+                -0.9998334050178528
+            ]
+        },
+        {
+            "bufferView": 2,
+            "byteOffset": 0,
+            "componentType": 5125,
+            "count": 12522,
+            "type": "SCALAR",
+            "max": [
+                2245
+            ],
+            "min": [
+                0
+            ]
+        }
+    ],
+    "buffers": [
+        {
+            "byteLength": 103992,
+            "uri": "result.bin"
+        }
+    ],
+    "bufferViews": [
+        {
+            "buffer": 0,
+            "byteOffset": 0,
+            "byteLength": 26952,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 26952,
+            "byteLength": 26952,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 53904,
+            "byteLength": 50088,
+            "target": 34963
+        }
+    ],
+    "materials": [
+        {
+            "name": "01 - Default",
+            "pbrMetallicRoughness": {
+                "metallicFactor": 0.0,
+                "roughnessFactor": 0.9683772325515747
+            }
+        }
+    ],
+    "meshes": [
+        {
+            "name": "Mesh",
+            "primitives": [
+                {
+                    "mode": 4,
+                    "material": 0,
+                    "indices": 2,
+                    "attributes": {
+                        "POSITION": 0,
+                        "NORMAL": 1
+                    }
+                }
+            ]
+        }
+    ],
+    "nodes": [
+        {
+            "name": "RootNode",
+            "children": [
+                1
+            ]
+        },
+        {
+            "name": "Mesh_$AssimpFbx$_PreRotation",
+            "matrix": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                -4.371138828673793e-8,
+                -1.0,
+                0.0,
+                0.0,
+                1.0,
+                -4.371138828673793e-8,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "children": [
+                2
+            ]
+        },
+        {
+            "name": "Mesh_$AssimpFbx$_Rotation",
+            "matrix": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                -4.371138828673793e-8,
+                1.0,
+                0.0,
+                0.0,
+                -1.0,
+                -4.371138828673793e-8,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "children": [
+                3
+            ]
+        },
+        {
+            "name": "Mesh_$AssimpFbx$_Scaling",
+            "matrix": [
+                0.10000000149011612,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.10000000149011612,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.10000000149011612,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "children": [
+                4
+            ]
+        },
+        {
+            "name": "Mesh",
+            "mesh": 0
+        }
+    ],
+    "scenes": [
+        {
+            "nodes": [
+                0
+            ]
+        }
+    ],
+    "scene": 0
+}
