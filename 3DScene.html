@@ -18,7 +18,7 @@
       <a-entity id="rig" position="0 0.5 0">
           <a-entity camera look-controls wasd-controls="acceleration:100"></a-entity>
       </a-entity>
-      <a-plane material="src=#ground; normalMap:#groundNormal;" height="100" width="100" rotation ="-90 0 0"></a-plane>
+      <a-plane src="#ground" height="100" width="100" rotation ="-90 0 0"></a-plane> <!-- material="src=#ground; normalMap:#groundNormal;"-->
       <a-entity obj-model="obj: #Arch-obj" material=" src:#diffuse;normalMap:#NormalTS; ambientOcclusionMap:#AO " rotation="0 90 0" position="0 0 -1" scale="0.1 0.1 0.1"></a-entity><!---->
     </a-scene>
   </body> 
