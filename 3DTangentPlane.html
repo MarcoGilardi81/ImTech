@@ -5,6 +5,7 @@
   <body>
     <a-scene background="transparent:true" >
       <a-assets>
+        <img id="moon" src="https://marcogilardi81.github.io/ImTech/moon.jpg
       </a-assets>
 
       <a-entity light="type:point; castShadow:true" rotation="40 0 0" position="0 4 2"></a-entity>
@@ -12,7 +13,7 @@
       <a-entity id="rig" position="0 0.7 1">
           <a-entity camera look-controls wasd-controls="acceleration:100"></a-entity>
       </a-entity>
-      <a-sphere color="yellow" radius="1"></a-sphere>
+      <a-sphere src="#moon" radius="1"></a-sphere>
       <a-plane rotation="-90 0 0" position="0 1 0" width="0.5" height="10" ></a-plane>
       
       <a-cylinder color="green" height="0.3" radius="0.1" position="0 1 0"></a-cylinder>
