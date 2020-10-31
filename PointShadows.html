@@ -1,0 +1,37 @@
+<html>
+
+  <head>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  </head>
+
+  <body>
+    <a-scene background="transparent:true">
+      <a-assets>
+
+      </a-assets>
+      <!-- Camera -->
+      <a-entity id="rig" rotation = "0 -90 0" position="-5 0 0">
+        <a-entity camera look-controls wasd-controls="acceleration:100"></a-entity>
+      </a-entity>
+
+      <!-- Light -->
+      <a-entity light="type:point; castShadow:true; intensity:0.75" position="0 0 0"></a-entity>
+      <a-sphere colour="white" emissive="white" radius="0.05"></a-sphere>
+
+      <!-- Objects -->
+      <a-box color="blue" shadow="receive: true" scale="0.5 0.5 0.5" position="0 -0.5 -1"></a-box>
+      <a-sphere color="red" shadow="receive: true" radius="0.3" position="1 1 0"></a-sphere>
+			<a-cone color="green" shadow="receive:true" height = "0.3" radius-bottom="0.1" radius-top="0" position="0 -1 1"></a-cone>
+			<a-cylinder color="cyan" shadow="receive: true" heigh = "0.5" radius = "0.1" position = "1 -1 0.8"></a-cylinder>
+
+      <!-- Surrounding Box -->
+      <a-plane color="white" shadow="receive: true" scale="6 6 6" position="0 0 -3"></a-plane>
+      <a-plane color="white" shadow="receive: true" scale="6 6 6" rotation="0 180 0" position="0 0 3"></a-plane>
+      <a-plane color="white" shadow="receive: true" scale="6 6 6" rotation="0 90 0" position="-3 0 0"></a-plane>
+      <a-plane color="white" shadow="receive: true" scale="6 6 6" rotation="0 270 0" position="3 0 0"></a-plane>
+      <a-plane color="white" shadow="receive: true" scale="6 6 6" rotation="-90 0 0" position="0 -3 0"></a-plane>
+      <a-plane color="white" shadow="receive: true" scale="6 6 6" rotation="90 0 0" position="0 3 0"></a-plane>
+    </a-scene>
+  </body>
+
+</html>
