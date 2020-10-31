@@ -15,15 +15,22 @@
       </a-entity>
 
       <!-- Light -->
-      <a-light type="ambient" color="#222"></a-light>   
-      <a-entity light="type:point; castShadow:true; intensity:0.75" position="0 0 0"></a-entity>
+      <a-light type="ambient" color="#333"></a-light>   
+      <a-entity light="type:point; castShadow:true; intensity:0.6" position="0 0 0"></a-entity>
       <a-sphere colour="white" emissive="white" radius="0.05"></a-sphere>
 
       <!-- Objects -->
-      <a-box color="blue" shadow="receive: true" scale="0.5 0.5 0.5" position="0 -0.5 -1"></a-box>
+      <a-entity rotation="0 0 0" animation="property: rotation; to: 0 360 360; loop: true; dur: 10000">
+			<a-box color="blue" shadow="receive: true" scale="0.5 0.5 0.5" position="0 -0.5 -1"></a-box>
       <a-sphere color="red" shadow="receive: true" radius="0.3" position="1 1 0"></a-sphere>
 			<a-cone color="green" shadow="receive:true" height = "0.3" radius-bottom="0.1" radius-top="0" position="0 -1 1"></a-cone>
+			<a-entity rotation="0 2 0" animation="property: rotation; to: 360 360 0; loop: true; dur: 10000">
+			<a-torus-knot color = "magenta" radius="0.3" radius-tubular="0.05" rotation="90 0 0" shadow="receive: true" position= "0 2 0"></a-torus-knot>
+			</a-entity>
 			<a-cylinder color="cyan" shadow="receive: true" heigh = "0.5" radius = "0.1" position = "1 -1 0.8"></a-cylinder>
+      <a-sphere position="-2 0 0" radius="0.2" shadow="receive:true" color="mediumseagreen"></a-sphere>
+			</a-entity>
+
 
       <!-- Surrounding Box -->
       <a-plane color="white" shadow="receive: true" scale="6 6 6" position="0 0 -3"></a-plane>
