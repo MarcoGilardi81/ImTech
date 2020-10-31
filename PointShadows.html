@@ -10,11 +10,12 @@
 
       </a-assets>
       <!-- Camera -->
-      <a-entity id="rig" rotation = "0 -90 0" position="-5 0 0">
+      <a-entity id="rig" rotation = "0 -90 0" position="-4 0 0">
         <a-entity camera look-controls wasd-controls="acceleration:100"></a-entity>
       </a-entity>
 
       <!-- Light -->
+      <a-light type="ambient" color="#888"></a-light>   
       <a-entity light="type:point; castShadow:true; intensity:0.75" position="0 0 0"></a-entity>
       <a-sphere colour="white" emissive="white" radius="0.05"></a-sphere>
 
