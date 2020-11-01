@@ -54,10 +54,12 @@
 						vec3 lightDir = normalize(lPos - vSurfPos);
 						vec3 viewDir = normalize(-vSurfPos);
 						vec3 reflectDir = reflect(-lightDir, normal);
-
+						
 						vec3 ambient = 0.05*color;
 						vec3 diffuse = max(dot(lightDir, normal), 0.0)* color;
-						vec3 specular = pow(max(dot(reflectDir, viewDir), 0.0), specPow) * vec3(0.3) ;
+						
+						float phongSpec = pow(max(dot(reflectDir, viewDir), 0.0), specPow); 
+						vec3 specular = phongSpec * vec3(0.3) ;
 
 						return (ambient + diffuse + specular);
 					}
@@ -74,17 +76,17 @@
   <body>
     <a-scene background="transparent:true">
       <a-assets>
-        <a-mixin id="lightPos" position="0 5 0"></a-mixin>
+        <a-mixin id="lightPos" position="0 2 0"></a-mixin>
       </a-assets>
 
       <a-light type="point" mixin="lightPos"></a-light>
-      <a-sphere radius="0.5" emissive="yellow" mixin="lightPos"></a-sphere>
+      <a-sphere radius="0.1" emissive="yellow" mixin="lightPos"></a-sphere>
 
-      <a-entity id="rig" position="0 2 3">
+      <a-entity id="rig"  position="0 1 10">
         <a-entity camera look-controls wasd-controls="acceleration:100"></a-entity>
       </a-entity>
 
-      <a-plane width="100" height="100" material="shader: phong; color: blue; specPow: 32.0; lightPos:'0.0 5.0 0.0' transparent: true" rotation="-90 0 0"></a-plane>
+      <a-plane width="100" height="100" material="shader: phong; color: blue; specPow: 100.0; lightPos:'0.0 5.0 0.0' transparent: true" rotation="-90 0 0"></a-plane>
 
     </a-scene>
   </body>
