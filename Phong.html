@@ -52,11 +52,10 @@
 						
 						vec3 viewDir = normalize(cameraPosition - vSurfPos);
     					vec3 reflectDir = reflect(-lightDir, normal);
-
         				float spec = pow(max(dot(viewDir, reflectDir), 0.0), specPow);
 						vec3 specular = vec3(0.3) * spec;
 						
-    				gl_FragColor = vec4(ambient + diffuse + specular, 1.0);
+    					gl_FragColor = vec4(ambient + diffuse + specular, 1.0);
 					}
 				`
       });
@@ -72,7 +71,7 @@
 
       <a-entity light="type:point; castShadow:true" rotation="40 0 0" position="0 4 2"></a-entity>
 
-      <a-entity id="rig" position="0 0.7 -1">
+      <a-entity id="rig" position="0 0.7 0">
         <a-entity camera look-controls wasd-controls="acceleration:100"></a-entity>
       </a-entity>
 
