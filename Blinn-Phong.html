@@ -54,12 +54,10 @@
     				
     					
 						vec3 halfwayDir = normalize(lightDir + viewDir);  
-        				//vec3 reflectDir = reflect(-lightDir, normal);	
 
 						float spec = pow(max(dot(normal, halfwayDir), 0.0), 8.0);
-        				//float spec = pow(max(dot(viewDir, reflectDir), 0.0), 8.0);
-
 						vec3 specular = vec3(0.3) * spec;
+
     					gl_FragColor = vec4(ambient + diffuse + specular, 1.0);
 					}
 				`
