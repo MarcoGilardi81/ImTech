@@ -9,7 +9,7 @@
             is: 'uniform',
             default: 'red'
           },
-          opacity: {
+          specPow: {
             type: 'number',
             is: 'uniform',
             default: 1.0
@@ -39,7 +39,7 @@
 					varying vec3 vSurfPos;
 				
 					uniform vec3 color;
-					uniform float opacity;
+					uniform float specPow;
 					uniform vec3 lightPos;
 					
 					void main () {
@@ -53,7 +53,7 @@
 						vec3 viewDir = normalize(cameraPosition - vSurfPos);
     					vec3 reflectDir = reflect(-lightDir, normal);
 
-        				float spec = pow(max(dot(viewDir, reflectDir), 0.0), 8.0);
+        				float spec = pow(max(dot(viewDir, reflectDir), 0.0), specPow);
 						vec3 specular = vec3(0.3) * spec;
 						
     				gl_FragColor = vec4(ambient + diffuse + specular, 1.0);
@@ -76,7 +76,7 @@
         <a-entity camera look-controls wasd-controls="acceleration:100"></a-entity>
       </a-entity>
 
-      <a-box material="shader: my-custom; color: blue; opacity: 1; lightPos:'0 4 2' transparent: true" position="0 0 -2"></a-box>
+      <a-box material="shader: my-custom; color: blue; specPow: 8; lightPos:'0 4 2' transparent: true" position="0 0 -2"></a-box>
 
     </a-scene>
   </body>
