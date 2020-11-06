@@ -56,7 +56,7 @@
 						vec3 halfwayDir = normalize(lightDir+viewDir);
 												
 						vec3 ambient = 0.05*color;
-						vec3 diffuse = max(dot(lightDir, normal), 0.0)* color;
+						vec3 diffuse = 3*max(dot(lightDir, normal), 0.0)* color;
 						
 						float blinnSpec = pow(max(dot(halfwayDir, normal), 0.0), specPow);
 						vec3 specular = blinnSpec * vec3(0.3) ;
