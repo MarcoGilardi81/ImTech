@@ -1,0 +1,20 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene background="transparent:true" >
+      <a-assets>
+         <a-asset-item id="diagram" src="PBRIrradiance.glb"></a-asset-item>
+      </a-assets>
+
+      <a-entity light="type:point; castShadow:true" rotation="40 0 0" position="0 4 2"></a-entity>
+      
+      <a-entity id="rig" position="0 0.7 1">
+          <a-entity camera look-controls wasd-controls="acceleration:100"></a-entity>
+      </a-entity>
+      
+        <a-entity gltf-model="#diagram"></a-entity>
+    </a-scene>
+  </body> 
+</html>
